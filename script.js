@@ -56,7 +56,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 });
 
 //Image View
-const mainImage = document.getElementById('pdImg');
+const mainImage = document.getElementById('pdImage');
 const relatedImages = document.querySelectorAll('#relatedImgs img');
 
 relatedImages.forEach(img => {
