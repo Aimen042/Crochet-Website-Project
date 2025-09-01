@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn Diaries</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body class="bg-amber-50">
+    <!--NavBar-->
+    <nav class="flex justify-between items-center shadow-lg md:px-16 md:py-5 px-7 py-2 bg-yellow-100">
+        <div class="flex flex-row justify-center items-center gap-5">
+            <img width="65px" src="src/assets/logo/crochetLogo.png" alt="logo">
+            <h2 class="font-comic text-2xl font-bold cursor-pointer text-green-800">YarnDiaries</h2>
+        </div>
+        <!--Desktop Menu-->
+        <div class="hidden md:flex gap-12">
+            <ul class="font-sans flex justify-center items-center gap-12 text-xl font-bold text-green-800">
+                <li><a href="#home" class="navTransition navLink">Home</a></li>
+                <li><a href="#aboutus" class="navTransition navLink">About</a></li>
+                <li><a href="#products" class="navTransition navLink">Products</a></li>
+                <li><a href="#contactus" class="navTransition navLink">Contact Us</a></li>
+            </ul>
+            <img class="cursor-pointer" width="33px" src="src/assets/logo/cart.png" alt="cart">
+        </div>
+        <!--Mobile Menu-->
+        <div id="menuBtn" class="flex gap-5 md:hidden">
+            <img class="cursor-pointer" width="28px" src="src/assets/logo/hamburger.png" alt="menu">
+            <img class="cursor-pointer" width="33px" src="src/assets/logo/cart.png" alt="cart">
+        </div>
+        <div id="menu"
+            class="fixed top-0 right-0 h-full w-64 bg-yellow-100 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+            <div id="closeBtn" class="flex justify-end md:hidden pt-5 pr-5">
+                <img class="cursor-pointer" width="28px" src="src/assets/logo/hamburger.png" alt="menu">
+            </div>
+            <ul class="font-serif font-bold flex flex-col gap-6 text-xl p-6 text-green-800">
+                <li><a href="#home" class="navLink">Home</a></li>
+                <li><a href="#aboutus" class="navLink">About</a></li>
+                <li><a href="#products" class="navLink">Products</a></li>
+                <li><a href="#contactus" class="navLink">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1 class="text-2xl text-green-700 md:text-4xl font-serif text-center pt-6"> Gallery of Accessories</h1>
+    <!-- Main Section -->
+    <div class="w-full flex flex-wrap justify-center items-start gap-16 px-4 sm:px-8 md:px-12 lg:px-16 py-12">
+        <!-- Gajray -->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/gajray2.jpeg" alt="Crochet Giraffe"
+                class="w-full h-64 sm:h-72 object-cover">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Gajray</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet gajray with soft yarn, cute details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.1200</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('gajray')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div> 
+        <!--Cap-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/cap3.jpeg" alt="Crochet Dino"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Spiderman Cap</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet spiderman cap with soft yarn, cute
+                    details, and
+                    a playful design</p>
+                <span class="mb-1 font-bold">Rs.700</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('cap')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Flower Pot-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/flowerpot.jpeg" alt="Crochet Lion"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Beautiful Flowerpot</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet flowerpot with soft yarn, cute details,
+                    and
+                    a playful design</p>
+                <span class="mb-1 font-bold">Rs.800</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('flowerpot')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Heart Flower Pot-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/heartpotMain.jpeg" alt="Crochet Rabbit"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Heart Shaped Pot</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet heart shaped pots with soft yarn, cute
+                    details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.1100</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('heartpot')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Black Bag-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/blackbag1.jpeg" alt="Crochet Teddy"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Crochet Black Tote Bag</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet tote bag with soft yarn, cute
+                    details, and a playful design</p>
+                <span class="mb-1 font-bold">Rs.2000</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('blackbag')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Beige Bag-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/bag1.jpeg" alt="Crochet Octopus"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Beige Bag</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade beige bag with soft yarn, cute details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.1500</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('beigebag')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Sunflower Bag-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/bluebag1.jpeg" alt="Crochet Penguin"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Sunflower Blue Bag</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade sunflower blue bag with soft yarn, cute
+                    details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.1200</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('bluebag')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--ToteBag-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/singlebag.jpeg" alt="Crochet Chick"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Tote Bag</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Stylish tote bag made with soft yarn, cute details, and
+                    a playful design</p>
+                <span class="mb-1 font-bold">Rs.1600</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('totebag')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Clutch-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/sidebagMain.jpeg" alt="Crochet Rabbit"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Stylish Cross Bag</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">tylish white cross body bag with soft yarn, cute
+                    details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.900</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('whitebag')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Chicks-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/chicksMain.jpeg" alt="Crochet Rabbit"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Chicks Gang</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet chicks gang with soft yarn, cute
+                    details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.3000</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('chicks')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Bouquet-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/cloth3.jpeg" alt="Crochet Rabbit"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Dressing Organiser</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Handmade crochet with soft yarn, cute details,
+                    and a playful design</p>
+                <span class="mb-1 font-bold">Rs.1700</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('dresser')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+        <!--Bows-->
+        <div
+            class="w-full sm:w-[280px] md:w-[320px] lg:w-[350px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 mx-7 lg:mx-0">
+            <img src="src/assets/acessories/bowMain.jpeg" alt="Crochet Rabbit"
+                class="w-full h-64 sm:h-72 object-cover rounded-xl">
+            <div class="pb-5 pt-4 px-5 flex flex-col bg-slate-50">
+                <h2 class="text-lg font-semibold mb-2">Hair Bow Band</h2>
+                <p class="mb-2 font-light text-sm sm:text-base">Style elegance with soft yarn, cute details,
+                    and a playful designed bows</p>
+                <span class="mb-1 font-bold">Rs.500</span>
+                <div class="flex flex-row text-lg space-x-2 mb-4">
+                    <i class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i><i class="fa-solid fa-star text-yellow-400"></i><i
+                        class="fa-solid fa-star text-yellow-400"></i>
+                </div>
+                <button onclick="viewAccessories('bow')"
+                    class="mx-auto px-10 sm:px-20 py-2 bg-[#fc797e] text-white font-bold poppins rounded-sm hover:bg-[#f95a5f] transition duration-300">View Details</button>
+            </div>
+        </div>
+
+    </div>
+     <!--Footer-->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
+            <div class="flex-1 min-w-[200px]">
+                <h2 class="text-2xl text-white mb-4 font-serif font-bold">Yarn Diaries</h2>
+                <p class="text-sm poppins">
+                    Handmade with love — Discover unique crochet pieces, cozy designs, and creative inspirations.
+                </p>
+            </div>
+            <div class="flex-1 min-w-[150px]">
+                <h3 class="text-lg text-white mb-4 font-serif font-semibold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-pink-400 poppins">Home</a></li>
+                    <li><a href="#aboutus" class="hover:text-pink-400 poppins">About</a></li>
+                    <li><a href="#products" class="hover:text-pink-400 poppins">Shop</a></li>
+                    <li><a href="#contactus" class="hover:text-pink-400 poppins">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[200px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Contact</h3>
+                <ul class="space-y-2 text-sm poppins">
+                    <li>Email: <a href="mailto:info@yarn-diaries.com"
+                            class="hover:text-pink-400">info@yarn-diaries.com</a></li>
+                    <li>Phone: +92 300 1234567</li>
+                    <li>Location: Karachi, Pakistan</li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Follow Us</h3>
+                <div class="flex flex-col space-y-2 poppins">
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+            © 2025 Yarn Diaries. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

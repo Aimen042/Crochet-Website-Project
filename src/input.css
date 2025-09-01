@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+.comic{
+  font-family: "Comic Neue", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif; 
+  font-weight: 500;
+  font-style: normal;
+}
+
+@layer utilities {
+  .navTransition {
+    @apply inline-block hover:scale-110 transition-transform duration-300 ease-in-out;
+  }
+
+  .navLink {
+    @apply relative inline-block pb-1 transition-colors duration-300;
+  }
+
+  .navLink::after {
+    content: "";
+    @apply absolute left-0 bottom-0 w-0 h-1 bg-yellow-400 transition-all duration-300 rounded-lg;
+  }
+
+  .navLink:hover::after {
+    @apply w-full;
+  }
+
+}

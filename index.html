@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yarn Diaries</title>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body> 
+    <!--NavBar-->
+    <nav class="flex justify-between items-center shadow-lg md:px-16 md:py-5 px-7 py-2 bg-yellow-100">
+        <div class="flex flex-row justify-center items-center gap-5">
+            <img width="65px" src="src/assets/logo/crochetLogo.png" alt="logo">
+            <h2 class="font-comic text-2xl font-bold cursor-pointer text-green-800">YarnDiaries</h2>
+        </div>
+        <!--Desktop Menu-->
+        <div class="hidden md:flex gap-12">
+            <ul class="font-sans flex justify-center items-center gap-12 text-xl font-bold text-green-800">
+                <li><a href="#home" class="navTransition navLink">Home</a></li>
+                <li><a href="#aboutus" class="navTransition navLink">About</a></li>
+                <li><a href="#products" class="navTransition navLink">Products</a></li>
+                <li><a href="#contactus" class="navTransition navLink">Contact Us</a></li>
+            </ul>
+            <img onclick="viewCart()" class="cursor-pointer" width="33px" src="src/assets/logo/cart.png" alt="cart">
+        </div>
+        <!--Mobile Menu-->
+        <div id="menuBtn" class="flex gap-5 md:hidden">
+            <img class="cursor-pointer" width="28px" src="src/assets/logo/hamburger.png" alt="menu">
+            <img onclick="viewCart()" class="cursor-pointer" width="33px" src="src/assets/logo/cart.png" alt="cart">
+        </div>
+        <div id="menu"
+            class="fixed top-0 right-0 h-full w-64 bg-yellow-100 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+            <div id="closeBtn" class="flex justify-end md:hidden pt-5 pr-5">
+                <img class="cursor-pointer" width="28px" src="src/assets/logo/hamburger.png" alt="menu">
+            </div>
+            <ul class="font-serif font-bold flex flex-col gap-6 text-xl p-6 text-green-800">
+                <li><a href="#home" class="navLink">Home</a></li>
+                <li><a href="#aboutus" class="navLink">About</a></li>
+                <li><a href="#products" class="navLink">Products</a></li>
+                <li><a href="#contactus" class="navLink">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Main Section-->
+    <div id="home" class="w-full min-h-screen flex flex-col lg:flex-row bg-gradient-to-r from-amber-50 to-yellow-200
+ pb-2 mb-0">
+        <div
+            class="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start px-6 md:px-12 py-12 xl:ml-16">
+            <div class="max-w-xl animate-fadeInUp">
+                <h1
+                    class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl text-green-700 mb-6 text-center lg:text-left leading-tight animate-slideInLeft xl:mb-14">
+                    WELCOME TO YARN DIARIES
+                </h1>
+                <h2
+                    class="poppins text-green-600 text-base sm:text-lg md:text-xl mb-10 text-center lg:text-left leading-relaxed animate-slideInLeft delay-200">
+                    Handmade with Love — Discover unique crochet pieces, cozy designs, and creative patterns that bring
+                    warmth and charm to every stitch.
+                </h2>
+                <div class="flex justify-center lg:justify-start animate-fadeIn delay-500">
+                    <button onclick="scrollToProducts()"
+                        class="bg-[#fc797e] text-white font-bold cursor-pointer px-8 sm:px-12 md:px-16 py-3 rounded-sm text-sm sm:text-base md:text-lg merriweather hover:bg-[#fb6469]">
+                        View Products
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center items-center px-6 md:px-12 py-6 lg:py-0 mb-0">
+            <img src="src/assets/backgrounds/crochetBg.png" alt="crochet-background"
+                class="w-full max-w-md md:max-w-lg lg:max-w-full h-auto object-contain animate-zoomIn delay-300">
+        </div>
+    </div>
+    <!-- About Section -->
+    <div id="aboutus"
+        class="flex flex-col md:flex-row-reverse bg-amber-50 px-6 pb-3 md:px-12 md:py-0 mt-0 pt-8 md:pt-0">
+        <div class="w-full md:w-1/2 flex flex-col justify-center items-start md:ml-10 lg:ml-20 xl:mr-20">
+            <h1
+                class="text-[#f65156] text-2xl md:text-4xl lg:text-5xl font-serif font-bold mb-6 md:mb-12 text-center md:text-left">
+                READY TO KNOW ABOUT US ?
+            </h1>
+            <p class="text-green-600 text-base md:text-lg lg:text-xl poppins text-center md:text-left">
+                At Yarn Diaries, we specialize in creating high-quality, handcrafted crochet pieces that blend timeless
+                craftsmanship with modern design. Each item is carefully made to ensure durability, comfort, and style,
+                offering our customers unique products that stand apart from mass-produced alternatives.
+                <strong class="text-red-600 font-extrabold">WE ONLY TAKE CASH ON DELIVERY ORDERS.</strong>
+            </p>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center items-center mb-8 md:mb-0">
+            <img src="src/assets/backgrounds/aboutUsBg.png" alt="knitting-background"
+                class="w-full max-w-sm md:max-w-md lg:max-w-full h-auto object-contain">
+        </div>
+    </div>
+    <!--Featured Products-->
+    <h1 id="products" class="md:text-4xl text-2xl text-green-700 font-serif font-bold text-center bg-amber-50 pb-5">
+        <span class="text-[#f65156]">FEATURED</span>
+        PRODUCTS</h1>
+    <div class="w-full flex flex-wrap gap-24 bg-amber-50 py-6 justify-center items-center px-10">
+        <!--Accessories-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/acessories/cap3.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">ACCESSORIES</h2>
+                <button data-page="accessories.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+        <!--Bouquets-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/bouquets/rose3.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">BOUQUETS</h2>
+                <button data-page="bouquets.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+        <!--Cartoon Characters-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/characters/penguinMain.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">CARTOON</h2>
+                <button data-page="characters.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+        <!--Keychains-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/keychains/keychainMain.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">KEYCHAINS</h2>
+                <button data-page="keychains.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+        <!--Jewellery-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/jewellery/earring3.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">JEWELLERY</h2>
+                <button data-page="jewellery.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+        <!--Flowers-->
+        <div
+            class="w-[300px] bg-slate-50 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <img src="src/assets/flowers/sunflower1.jpeg" alt="Accessories" class="w-full h-64 object-cover">
+            <div class="p-5 flex flex-col items-center text-center">
+                <h2 class="text-xl text-green-600 mb-3 font-serif font-bold">FLOWERS</h2>
+                <button data-page="flowers.html"
+                    class="productBtn px-5 py-2 bg-[#fc797e] text-white font-bold poppins rounded-lg hover:bg-[#fb6469] transition duration-300">
+                    View All Products
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <!--Contact Us -->
+    <div id="contactus" class="w-full flex flex-col lg:flex-row bg-amber-50">
+        <div
+            class="w-full lg:w-1/2 bg-gradient-to-r from-yellow-200 to-red-400 mx-auto my-6 sm:my-10 lg:m-20 rounded-2xl py-10 px-6 sm:px-10 flex flex-col lg:flex-row items-center lg:items-start max-w-[90%] sm:max-w-[95%] lg:max-w-none justify-center xl:pt-28 xl:mr-0">
+            <img src="src/assets/backgrounds/connect.png" alt="" class="w-32 sm:w-48 lg:w-64">
+            <div class="flex flex-col justify-center items-center lg:items-start 
+                    lg:ml-10 mt-6 lg:mt-0 text-center lg:text-left">
+                <h1 class="text-white text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold">LET'S CONNECT</h1>
+                <p class="text-white poppins text-sm sm:text-base lg:text-lg mt-4 lg:mt-8 lg:mr-5">
+                    We’d love to hear from you! Whether it’s a question, feedback, or just a warm hello — let’s stay
+                    stitched together.
+                </p>
+                <button onclick="scrollToProducts()"
+                    class="mt-6 bg-gradient-to-r from-red-500 to-yellow-300 rounded-md py-3 px-6 text-white font-semibold">
+                    Visit Our Store
+                </button>
+            </div>
+        </div>
+        <!--Form-->
+        <div
+            class="w-full lg:w-1/2 flex flex-col justify-center items-center py-10 sm:py-16 lg:py-32 px-4 sm:px-10 lg:pr-20">
+            <form onsubmit="sendMessage(event)" class="w-full max-w-lg space-y-5">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#fc797e] focus:border-[#fc797e] outline-none">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your e-mail address"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#fc797e] focus:border-[#fc797e] outline-none">
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Enter your message"
+                        class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-[#fc797e] focus:border-[#fc797e] outline-none resize-none"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit"
+                    class="w-full py-3 px-6 bg-[#fc797e] text-white font-semibold rounded-lg shadow-md hover:bg-[#fb6469] transition duration-300 poppins">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
+            <div class="flex-1 min-w-[200px]">
+                <h2 class="text-2xl text-white mb-4 font-serif font-bold">Yarn Diaries</h2>
+                <p class="text-sm poppins">
+                    Handmade with love — Discover unique crochet pieces, cozy designs, and creative inspirations.
+                </p>
+            </div>
+            <div class="flex-1 min-w-[150px]">
+                <h3 class="text-lg text-white mb-4 font-serif font-semibold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="hover:text-pink-400 poppins">Home</a></li>
+                    <li><a href="#aboutus" class="hover:text-pink-400 poppins">About</a></li>
+                    <li><a href="#products" class="hover:text-pink-400 poppins">Shop</a></li>
+                    <li><a href="#contactus" class="hover:text-pink-400 poppins">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[200px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Contact</h3>
+                <ul class="space-y-2 text-sm poppins">
+                    <li>Email: <a href="mailto:info@yarn-diaries.com"
+                            class="hover:text-pink-400">info@yarn-diaries.com</a></li>
+                    <li>Phone: +92 300 1234567</li>
+                    <li>Location: Karachi, Pakistan</li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Follow Us</h3>
+                <div class="flex flex-col space-y-2 poppins">
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+            © 2025 Yarn Diaries. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+
+</html>

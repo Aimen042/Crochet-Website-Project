@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../dist/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <title>Product Jewellery</title>
+</head>
+
+<body class="bg-slate-50">
+    <!--NavBar-->
+    <nav class="flex justify-between items-center shadow-lg md:px-16 md:py-5 px-7 py-2 bg-yellow-100">
+        <div class="flex flex-row justify-center items-center gap-5">
+            <img width="65px" src="../../src/assets/logo/crochetLogo.png" alt="logo">
+            <h2 class="font-comic text-2xl font-bold cursor-pointer text-green-800">YarnDiaries</h2>
+        </div>
+        <!--Desktop Menu-->
+        <div class="hidden md:flex gap-12">
+            <ul class="font-sans flex justify-center items-center gap-12 text-xl font-bold text-green-800">
+                <li><a href="../../index.html#home" class="navTransition navLink">Home</a></li>
+                <li><a href="../../index.html#aboutus" class="navTransition navLink">About</a></li>
+                <li><a href="../../index.html#products" class="navTransition navLink">Products</a></li>
+                <li><a href="../../index.html#contactus" class="navTransition navLink">Contact Us</a></li>
+            </ul>
+            <img onclick="viewCart2()" class="cursor-pointer" width="33px" src="../../src/assets/logo/cart.png" alt="cart">
+        </div>
+        <!--Mobile Menu-->
+        <div id="menuBtn" class="flex gap-5 md:hidden">
+            <img class="cursor-pointer" width="28px" src="../../src/assets/logo/hamburger.png" alt="menu">
+            <img onclick="viewCart2()" class="cursor-pointer" width="33px" src="../../src/assets/logo/cart.png" alt="cart">
+        </div>
+        <div id="menu"
+            class="fixed top-0 right-0 h-full w-64 bg-yellow-100 shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+            <div id="closeBtn" class="flex justify-end md:hidden pt-5 pr-5">
+                <img class="cursor-pointer" width="28px" src="../../src/assets/logo/hamburger.png" alt="menu">
+            </div>
+            <ul class="font-serif font-bold flex flex-col gap-6 text-xl p-6 text-green-800">
+                <li><a href="../../index.html#homee" class="navLink">Home</a></li>
+                <li><a href="../../index.html#aboutus" class="navLink">About</a></li>
+                <li><a href="../../index.html#products" class="navLink">Products</a></li>
+                <li><a href="../../index.html#contactus" class="navLink">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="w-full pl-4 md:pl-24 pt-6 text-base md:text-xl text-gray-500 font-sans">
+        <a href="../../index.html" class="hover:font-semibold">Home /</a>
+        <a href="../../index.html#products" class="hover:font-semibold">Products /</a>
+        <a href="/jewellery.html" class="hover:font-semibold">Jewellery</a>
+    </div>
+    <!--Main Section-->
+    <div class="w-full flex flex-col lg:flex-row bg-slate-50 p-6 md:pr-8 md:px-12 lg:pl-24 md:py-8 gap-6 min-h-screen">
+        <!-- Image Section -->
+        <div class="w-full lg:w-1/2 flex flex-col gap-4">
+            <!-- Main Image -->
+            <div
+                class="w-full rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 bg-white">
+                <img id="pdImage"
+                    class="w-full h-[395px] sm:h-[400px] md:h-[570px] lg:h-[600px] xl:h-[675px] object-cover cursor-pointer"
+                    src="../../src/assets/jewellery/white.jpeg" alt="Main Product Image">
+            </div>
+            <!-- Related Images -->
+            <div id="relatedImgs" class="w-full flex flex-row gap-3 flex-wrap">
+                <div
+                    class="w-28 sm:w-40 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 bg-white cursor-pointer">
+                    <img class="w-full h-[125px] md:h-[185px] object-cover" src="../../src/assets/jewellery/white.jpeg"
+                        alt="Product View 3">
+                </div>
+                <div
+                    class="w-28 sm:w-40 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 bg-white cursor-pointer">
+                    <img class="w-full h-[125px] md:h-[185px] object-cover" src="../../src/assets/jewellery/white1.jpeg"
+                        alt="Product View 3">
+                </div>
+                <div
+                    class="w-28 sm:w-40 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200 bg-white cursor-pointer">
+                    <img class="w-full h-[125px] md:h-[185px] object-cover" src="../../src/assets/jewellery/white2.jpeg"
+                        alt="Product View 3">
+                </div>
+            </div>
+        </div>
+        <!-- Product Info Section -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-start px-2 sm:px-8 md:px-12 py-6 bg-slate-50 shadow-lg 
+           h-auto rounded-2xl">
+            <h1 id="pdName" class="text-2xl sm:text-3xl font-semibold mb-6 sm:mb-12 mt-6 sm:mt-12">White Earrings</h1>
+            <span id="pdPrice" class="font-bold text-red-600 text-lg mb-2">RS.2000 Each</span>
+            <div class="flex flex-row text-lg space-x-2 mb-6 sm:mb-12">
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+                <i class="fa-solid fa-star text-yellow-400"></i>
+            </div>
+            <p class="text-gray-500 mb-6 sm:mb-8 text-sm sm:text-base">
+              Add a sparkle of elegance to your look with these stunning Earrings. Perfectly crafted to complement both casual and formal outfits, they bring out your unique style while offering all-day comfort.
+            </p>
+            <h2 class="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-gray-700">✨ Features:</h2>
+            <ul class="list-disc list-inside ml-4 sm:ml-8 mb-6 sm:mb-8 space-y-1 sm:space-y-2 text-sm sm:text-base">
+                <li class="text-gray-500">Premium Quality – Made with durable, skin-friendly materials.</li>
+                <li class="text-gray-500">Elegant Design – Stylish patterns that suit any occasion.</li>
+                <li class="text-gray-500">Lightweight & Comfortable – Easy to wear throughout the day.</li>
+                <li class="text-gray-500">Ideal Gift – A thoughtful present for birthdays, anniversaries, or special occasions.</li>
+            </ul>
+            <p class="text-gray-500 mb-6 sm:mb-12 text-sm sm:text-base">
+                Whether worn as a subtle daily accessory or as a statement piece for special occasions, these earrings are both graceful and timeless — a true touch of handmade beauty.
+            </p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 mt-4 sm:mt-6">
+                <div
+                    class="flex items-center justify-center border rounded-sm overflow-hidden w-full sm:w-fit mx-auto sm:mx-0">
+                    <button onclick="decreaseQty()"
+                        class="px-4 py-2 bg-gray-200 hover:bg-gray-300 transition text-lg sm:text-xl">-</button>
+                    <input id="pdQuantity" type="number" value="1" min="1"
+                        class="w-16 text-center border-x outline-none bg-slate-50 text-base">
+                    <button onclick="increaseQty()"
+                        class="px-4 py-2 bg-gray-200 hover:bg-gray-300 transition text-lg sm:text-xl">+</button>
+                </div>
+                <button onclick="addToCart()"
+                 class="w-full sm:w-auto px-8 sm:px-20 py-2 bg-gray-800 text-white font-bold poppins rounded-sm 
+                   hover:bg-[#f95a5f] transition duration-300">
+                    ADD TO CART
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-6">
+        <div class="max-w-6xl mx-auto flex flex-wrap justify-between gap-8">
+            <div class="flex-1 min-w-[200px]">
+                <h2 class="text-2xl text-white mb-4 font-serif font-bold">Yarn Diaries</h2>
+                <p class="text-sm poppins">
+                    Handmade with love — Discover unique crochet pieces, cozy designs, and creative inspirations.
+                </p>
+            </div>
+            <div class="flex-1 min-w-[150px]">
+                <h3 class="text-lg text-white mb-4 font-serif font-semibold">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="../../index.html#home" class="hover:text-pink-400 poppins">Home</a></li>
+                    <li><a href="../../index.html#aboutus" class="hover:text-pink-400 poppins">About</a></li>
+                    <li><a href="../../index.html#products" class="hover:text-pink-400 poppins">Shop</a></li>
+                    <li><a href="../../index.html#contactus" class="hover:text-pink-400 poppins">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[200px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Contact</h3>
+                <ul class="space-y-2 text-sm poppins">
+                    <li>Email: <a href="mailto:info@yarn-diaries.com"
+                            class="hover:text-pink-400">info@yarn-diaries.com</a></li>
+                    <li>Phone: +92 300 1234567</li>
+                    <li>Location: Karachi, Pakistan</li>
+                </ul>
+            </div>
+            <div class="flex-1 min-w-[180px]">
+                <h3 class="text-lg font-semibold text-white mb-4 font-serif">Follow Us</h3>
+                <div class="flex flex-col space-y-2 poppins">
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-pinterest"></i> Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-400">
+            © 2025 Yarn Diaries. All rights reserved.
+        </div>
+    </footer>
+    
+    <script src="../../script.js"></script>
+</body>
