@@ -37,7 +37,9 @@ Storage: LocalStorage (for cart management)
 ---
 
 ## 📂 Project Structure
+
 Yarn-Diaries/
+
 │── index.html
 
 │── accessories.html
@@ -55,17 +57,25 @@ Yarn-Diaries/
 │── cart.html
 
 │── dist/
+
 │   └── output.css
 
 │── products/
+
 │   └── accessories/
+
 │       ├── cap.html
+
 │       └── bow.html...
 
 │── src/
+
 │   ├── input.css
+
 │   └── assets/
+
 │       ├── logo/
+
 │       └── product-images/...
 
 │── script.js
