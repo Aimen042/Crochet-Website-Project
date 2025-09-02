@@ -56,27 +56,11 @@ Yarn-Diaries/
 
 │── cart.html
 
-│── dist/
+│── dist/ output.css
 
-│   └── output.css
+│── products/ accessories/ cap.html...
 
-│── products/
-
-│   └── accessories/
-
-│       ├── cap.html
-
-│       └── bow.html...
-
-│── src/
-
-│   ├── input.css
-
-│   └── assets/
-
-│       ├── logo/
-
-│       └── product-images/...
+│── src/ input.css, assets/ logo/ product-images/...
 
 │── script.js
 
