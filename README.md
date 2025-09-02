@@ -2,7 +2,7 @@
 
 A modern crochet e-commerce website where users can explore handmade crochet products, customize designs, and place orders online.
 
----
+
 
 ## ✨ Features
 
@@ -18,13 +18,13 @@ A modern crochet e-commerce website where users can explore handmade crochet pro
 
 📱 Mobile-friendly design
 
----
+
 
 ## 🌐 Live Demo
 
 [View Live](https://yarndiaries.netlify.app/)
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -34,7 +34,7 @@ Deployment: Netlify
 
 Storage: LocalStorage (for cart management)
 
----
+
 
 ## 📂 Project Structure
 
@@ -70,7 +70,7 @@ Yarn-Diaries/
 
 │── README.md
 
----
+
 
 ## 🚀 Deployment
 
@@ -80,7 +80,7 @@ Push changes to GitHub
 
 Netlify auto-builds from your repo
 
----
+
 
 ## ⚙️ Installation & Usage
 
