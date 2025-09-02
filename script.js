@@ -148,6 +148,16 @@ function submitOrder() {
         return;
     }
 
+    const username = prompt("Enter You Name: ");
+    const userphone = prompt("Enter Your Phone Numer: ");
+    const address = prompt("Enter your Address: ");
+    const payment = prompt("Enter Payment Method (Cod / Online) ? ")
+
+    if (payment == "online"){
+        prompt("Enter your card pin: ");
+        prompt("Enter the total amount: ");
+    }
+
     let total = 0;
     let orderHTML = "";
 
@@ -172,17 +182,4 @@ function submitOrder() {
     document.getElementById("orderSummarySection").classList.remove("hidden");
     localStorage.removeItem("cart");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

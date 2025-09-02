@@ -12,7 +12,7 @@
 
     <!-- CART SECTION -->
     <section id="cartSection" class="w-full max-w-4xl bg-white rounded-2xl shadow p-4 sm:p-6 md:p-8">
-        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
             <h1 class="text-xl sm:text-2xl font-bold">Your Cart - Payment only (COD)</h1>
             <a href="/index.html" class="text-gray-500 hover:font-semibold text-sm sm:text-base">
                 Back To Home
@@ -34,7 +34,7 @@
                     class="w-full sm:w-auto px-4 py-2 rounded bg-gray-800 text-white hover:bg-gray-600 transition">
                     Clear Cart
                 </button>
-                <button onclick="submitOrder()" 
+                <button onclick="submitOrder()"
                     class="w-full sm:w-auto px-4 py-2 rounded bg-gray-800 text-white hover:bg-gray-600 transition">
                     Submit
                 </button>
@@ -42,20 +42,18 @@
         </div>
     </section>
 
-    <!-- ORDER SUMMARY SECTION (hidden initially) -->
-    <section id="orderSummarySection" 
+    <!-- ORDER SUMMARY SECTION -->
+    <section id="orderSummarySection"
         class="w-full max-w-4xl bg-green-50 border border-green-300 rounded-2xl shadow p-6 mt-6 hidden">
         <h2 class="text-xl font-bold text-green-700 mb-4">Order Summary</h2>
         <div id="orderDetails" class="space-y-2 text-gray-700">
-            <!-- Order details will be inserted here -->
         </div>
         <p class="mt-4 font-semibold text-green-800">
             ✅ Your order has been placed successfully!
         </p>
         <div class="mt-6">
-            <a href="/index.html" 
-               class="px-4 py-2 rounded bg-gray-800 text-white hover:bg-gray-600 transition">
-               Back to Home
+            <a href="/index.html" class="px-4 py-2 rounded bg-gray-800 text-white hover:bg-gray-600 transition">
+                Back to Home
             </a>
         </div>
     </section>
