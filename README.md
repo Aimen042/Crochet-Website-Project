@@ -39,27 +39,41 @@ Storage: LocalStorage (for cart management)
 ## 📂 Project Structure
 Yarn-Diaries/
 │── index.html
+
 │── accessories.html
+
 │── keychain.html
+
 │── characters.html
+
 │── jewellery.html
+
 │── flowers.html
+
 │── bouquets.html
+
 │── cart.html
+
 │── dist/
 │   └── output.css
+
 │── products/
 │   └── accessories/
 │       ├── cap.html
 │       └── bow.html...
+
 │── src/
 │   ├── input.css
 │   └── assets/
 │       ├── logo/
 │       └── product-images/...
+
 │── script.js
+
 │── package.json
+
 │── tailwind.config.js
+
 │── README.md
 
 ---
